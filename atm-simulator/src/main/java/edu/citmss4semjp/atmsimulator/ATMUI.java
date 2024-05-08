@@ -13,15 +13,16 @@ import java.util.Objects;
 public class ATMUI extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Transactions.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Home.fxml")));
         Scene scene = new Scene(root);
+        stage.setScene(scene);
+
         stage.setTitle("ATM Simulator");
         Image appIcon = new Image("KASE_Logo2.png");
         stage.getIcons().add(appIcon);
 
         stage.setFullScreen(true);
-        //stage.setResizable(false);
-        stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 

@@ -28,12 +28,13 @@ public class Withdrawal {
         System.out.print("Enter withdrawal amount: ");
         w_amt = sc.nextLong();
         sc.close();
-        if(w_amt<=10000)
+        if(w_amt <= 10000)
         {
             Withdrawal wd = new Withdrawal(avl_bal, w_amt);
             wd.withdraw(); // Corrected this line to use the instance method
         }
-        else
-        System.out.print("\nTRY WITH LESSER AMOUNT");
+        else {
+            System.out.print("\nTRY WITH LESSER AMOUNT");
+        }
     }
 }

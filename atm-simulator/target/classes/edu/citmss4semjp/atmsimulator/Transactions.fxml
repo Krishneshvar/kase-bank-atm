@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="947.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="rootLayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="947.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.citmss4semjp.atmsimulator.TransactionsController">
     <top>
         <HBox fx:id="appHB" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #FF5722;" BorderPane.alignment="CENTER">
             <children>
@@ -131,89 +131,29 @@
         </SplitPane>
     </right>
     <left>
-        <Pane fx:id="leftSysBtns" prefHeight="522.0" prefWidth="100.0" style="-fx-background-color: #303841;" BorderPane.alignment="BOTTOM_CENTER">
-            <children>
-                <VBox alignment="BOTTOM_CENTER" layoutY="-2.0" prefHeight="670.0" prefWidth="100.0" spacing="50.0" style="-fx-background-color: #303841;">
-                    <children>
-                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px;" text="&gt;">
-                            <VBox.margin>
-                                <Insets />
-                            </VBox.margin>
-                            <font>
-                                <Font size="22.0" />
-                            </font>
-                        </Button>
-                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px;" text="&gt;">
-                            <font>
-                                <Font size="22.0" />
-                            </font>
-                        </Button>
-                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px;" text="&gt;">
-                            <font>
-                                <Font size="22.0" />
-                            </font>
-                        </Button>
-                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px;" text="&gt;">
-                            <font>
-                                <Font size="22.0" />
-                            </font>
-                        </Button>
-                    </children>
-                </VBox>
-            </children>
-        </Pane>
+        <Pane fx:id="leftSysBtns" prefHeight="522.0" prefWidth="100.0" style="-fx-background-color: #303841;" BorderPane.alignment="BOTTOM_CENTER" />
     </left>
     <center>
         <BorderPane fx:id="dispPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: silver;" BorderPane.alignment="CENTER">
             <right>
-                <Pane fx:id="rightSysBtns" prefHeight="670.0" prefWidth="100.0" style="-fx-background-color: #303841;" BorderPane.alignment="BOTTOM_CENTER">
-                    <children>
-                        <VBox alignment="BOTTOM_CENTER" layoutY="-1.0" prefHeight="670.0" prefWidth="100.0" spacing="50.0" style="-fx-background-color: #303841;">
-                            <children>
-                                <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #00ADB5 #00ADB5; -fx-background-radius: 20px;" text="&lt;">
-                                    <VBox.margin>
-                                        <Insets />
-                                    </VBox.margin>
-                                    <font>
-                                        <Font size="22.0" />
-                                    </font>
-                                </Button>
-                                <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px;" text="&lt;">
-                                    <font>
-                                        <Font size="22.0" />
-                                    </font>
-                                </Button>
-                                <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px;" text="&lt;">
-                                    <font>
-                                        <Font size="22.0" />
-                                    </font>
-                                </Button>
-                                <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px;" text="&lt;">
-                                    <font>
-                                        <Font size="22.0" />
-                                    </font>
-                                </Button>
-                            </children>
-                        </VBox>
-                    </children>
-                </Pane>
+                <Pane fx:id="rightSysBtns" prefHeight="670.0" prefWidth="100.0" style="-fx-background-color: #303841;" BorderPane.alignment="BOTTOM_CENTER" />
             </right>
          <center>
             <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <left>
-                  <VBox alignment="BOTTOM_CENTER" maxWidth="300.0" prefHeight="668.0" prefWidth="300.0" spacing="50.0" BorderPane.alignment="CENTER">
+                  <VBox alignment="BOTTOM_LEFT" maxWidth="300.0" prefHeight="668.0" prefWidth="300.0" spacing="50.0" BorderPane.alignment="CENTER">
                      <children>
-                        <Button alignment="CENTER" contentDisplay="CENTER" maxWidth="300.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px;" text="Withdraw" textAlignment="CENTER">
+                        <Button fx:id="withdrawBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px;" text="Withdraw" textAlignment="CENTER">
                            <font>
                               <Font size="22.0" />
                            </font>
                         </Button>
-                        <Button alignment="CENTER" contentDisplay="CENTER" maxWidth="300.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px;" text="Pin Change" textAlignment="CENTER">
+                        <Button fx:id="pinchangeBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px;" text="Pin Change" textAlignment="CENTER">
                            <font>
                               <Font size="22.0" />
                            </font>
                         </Button>
-                        <Button alignment="CENTER" contentDisplay="CENTER" maxWidth="300.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px;" text="Funds Transfer" textAlignment="CENTER">
+                        <Button fx:id="ftBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px;" text="Funds Transfer" textAlignment="CENTER">
                            <font>
                               <Font size="22.0" />
                            </font>
@@ -225,19 +165,19 @@
                   </VBox>
                </left>
                <right>
-                  <VBox alignment="BOTTOM_CENTER" maxWidth="300.0" prefHeight="668.0" prefWidth="300.0" spacing="50.0" BorderPane.alignment="CENTER">
+                  <VBox alignment="BOTTOM_RIGHT" maxWidth="300.0" prefHeight="668.0" prefWidth="300.0" spacing="50.0" BorderPane.alignment="CENTER">
                      <children>
-                        <Button alignment="CENTER" contentDisplay="CENTER" maxWidth="300.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px;" text="Deposit" textAlignment="CENTER">
+                        <Button fx:id="depositBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px;" text="Deposit" textAlignment="CENTER">
                            <font>
                               <Font size="22.0" />
                            </font>
                         </Button>
-                        <Button alignment="CENTER" contentDisplay="CENTER" maxWidth="300.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px;" text="Phone No. Change" textAlignment="CENTER">
+                        <Button fx:id="pnochangeBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px;" text="Phone No. Change" textAlignment="CENTER">
                            <font>
                               <Font size="22.0" />
                            </font>
                         </Button>
-                        <Button alignment="CENTER" contentDisplay="CENTER" maxWidth="300.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px;" text="Inquire Balance" textAlignment="CENTER">
+                        <Button fx:id="balBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px;" text="Inquire Balance" textAlignment="CENTER">
                            <font>
                               <Font size="22.0" />
                            </font>
