@@ -60,37 +60,37 @@
                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
-                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="1" textAlignment="CENTER">
+                                <Button fx:id="btn1" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="1" textAlignment="CENTER">
                                     <font>
                                         <Font size="20.0" />
                                     </font>
                                 </Button>
-                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="2" textAlignment="CENTER" GridPane.columnIndex="1">
+                                <Button fx:id="btn2" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="2" textAlignment="CENTER" GridPane.columnIndex="1">
                                     <font>
                                         <Font size="20.0" />
                                     </font>
                                 </Button>
-                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="3" textAlignment="CENTER" GridPane.columnIndex="2">
+                                <Button fx:id="btn3" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="3" textAlignment="CENTER" GridPane.columnIndex="2">
                                     <font>
                                         <Font size="20.0" />
                                     </font>
                                 </Button>
-                                <Button fx:id="cancel" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: red; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="CANCEL" textAlignment="CENTER" GridPane.columnIndex="3">
+                                <Button fx:id="cancel" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#goHome" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: red; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="CANCEL" textAlignment="CENTER" GridPane.columnIndex="3">
                                     <font>
                                         <Font name="System Bold" size="14.0" />
                                     </font>
                                 </Button>
-                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="4" textAlignment="CENTER" GridPane.rowIndex="1">
+                                <Button fx:id="btn4" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="4" textAlignment="CENTER" GridPane.rowIndex="1">
                                     <font>
                                         <Font size="20.0" />
                                     </font>
                                 </Button>
-                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <Button fx:id="btn5" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                     <font>
                                         <Font size="20.0" />
                                     </font>
                                 </Button>
-                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="6" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                <Button fx:id="btn6" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="6" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                     <font>
                                         <Font size="20.0" />
                                     </font>
@@ -100,27 +100,27 @@
                                         <Font name="System Bold" size="17.0" />
                                     </font>
                                 </Button>
-                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="7" textAlignment="CENTER" GridPane.rowIndex="2">
+                                <Button fx:id="btn7" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="7" textAlignment="CENTER" GridPane.rowIndex="2">
                                     <font>
                                         <Font size="20.0" />
                                     </font>
                                 </Button>
-                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="8" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                <Button fx:id="btn8" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="8" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                     <font>
                                         <Font size="20.0" />
                                     </font>
                                 </Button>
-                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="9" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                <Button fx:id="btn9" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="9" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                     <font>
                                         <Font size="20.0" />
                                     </font>
                                 </Button>
-                                <Button fx:id="enter" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: green; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="ENTER" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                <Button fx:id="enter" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleSubmission" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: green; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="ENTER" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                     <font>
                                         <Font name="System Bold" size="17.0" />
                                     </font>
                                 </Button>
-                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                <Button fx:id="btn0" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                     <font>
                                         <Font size="20.0" />
                                     </font>
@@ -136,37 +136,37 @@
         <Pane fx:id="leftSysBtns" prefHeight="522.0" prefWidth="100.0" style="-fx-background-color: #303841;" BorderPane.alignment="BOTTOM_CENTER" />
     </left>
     <center>
-        <BorderPane fx:id="dispPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: silver;" BorderPane.alignment="CENTER">
+        <BorderPane fx:id="dispPane" prefHeight="770.0" prefWidth="950.0" style="-fx-background-color: silver;" BorderPane.alignment="CENTER">
             <right>
                 <Pane fx:id="rightSysBtns" prefHeight="522.0" prefWidth="100.0" style="-fx-background-color: #303841;" BorderPane.alignment="BOTTOM_CENTER" />
             </right>
             <center>
-                <FlowPane alignment="CENTER" orientation="VERTICAL" vgap="10.0" BorderPane.alignment="CENTER">
+                <FlowPane alignment="CENTER" columnHalignment="CENTER" orientation="VERTICAL" vgap="10.0" BorderPane.alignment="CENTER">
                     <children>
                         <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="98.0" prefWidth="566.0" text="Please enter account details" textAlignment="CENTER" wrapText="true">
                             <font>
                                 <Font size="45.0" />
                             </font>
                         </Label>
-                  <TextField fx:id="accTxtfield" prefHeight="35.0" prefWidth="440.0" promptText="Enter Account Number" style="-fx-background-radius: 20px; -fx-padding: 10px;">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </TextField>
-                  <PasswordField fx:id="pinTxtfield" promptText="Enter PIN" style="-fx-background-radius: 20px; -fx-padding: 10px;">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </PasswordField>
-                  <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <Button fx:id="submitbtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="125.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-effect: dropshadow(gaussian, black, 10, 0.5, 0, 0);" text="Submit" textAlignment="CENTER">
-                           <font>
-                              <Font size="22.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </HBox>
+                        <TextField fx:id="accTxtfield" prefHeight="35.0" prefWidth="440.0" promptText="Enter Account Number" style="-fx-background-radius: 20px; -fx-padding: 10px;">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </TextField>
+                        <PasswordField fx:id="pinTxtfield" promptText="Enter PIN" style="-fx-background-radius: 20px; -fx-padding: 10px;">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </PasswordField>
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <Button fx:id="submitbtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleSubmission" prefHeight="50.0" prefWidth="125.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-effect: dropshadow(gaussian, black, 10, 0.5, 0, 0);" text="Submit" textAlignment="CENTER">
+                                    <font>
+                                        <Font size="22.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </HBox>
                     </children>
                 </FlowPane>
             </center>

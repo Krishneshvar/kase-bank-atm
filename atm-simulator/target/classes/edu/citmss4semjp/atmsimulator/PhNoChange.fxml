@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="rootLayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="947.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="rootLayout" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="947.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.citmss4semjp.atmsimulator.PNoChangeController">
     <top>
         <HBox fx:id="appHB" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #FF5722;" BorderPane.alignment="CENTER">
             <children>
@@ -74,7 +74,7 @@
                                         <Font size="20.0" />
                                     </font>
                                 </Button>
-                                <Button fx:id="cancel" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: red; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="CANCEL" textAlignment="CENTER" GridPane.columnIndex="3">
+                                <Button fx:id="cancel" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#goHome" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: red; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="CANCEL" textAlignment="CENTER" GridPane.columnIndex="3">
                                     <font>
                                         <Font name="System Bold" size="14.0" />
                                     </font>
@@ -114,7 +114,7 @@
                                         <Font size="20.0" />
                                     </font>
                                 </Button>
-                                <Button fx:id="enter" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: green; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="ENTER" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                <Button fx:id="enter" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#pnoChange" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: green; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="ENTER" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                     <font>
                                         <Font name="System Bold" size="17.0" />
                                     </font>
@@ -135,31 +135,46 @@
         <Pane fx:id="leftSysBtns" prefHeight="522.0" prefWidth="100.0" style="-fx-background-color: #303841;" BorderPane.alignment="BOTTOM_CENTER" />
     </left>
     <center>
-        <BorderPane fx:id="dispPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: silver;" BorderPane.alignment="CENTER">
+        <BorderPane fx:id="dispPane" prefHeight="369.0" prefWidth="881.0" style="-fx-background-color: silver;" BorderPane.alignment="CENTER">
             <right>
                 <Pane fx:id="rightSysBtns" prefHeight="522.0" prefWidth="100.0" style="-fx-background-color: #303841;" BorderPane.alignment="BOTTOM_CENTER" />
             </right>
             <center>
                 <FlowPane alignment="CENTER" orientation="VERTICAL" vgap="10.0" BorderPane.alignment="CENTER">
                     <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="97.0" prefWidth="500.0" text="Phone Number Change" textAlignment="CENTER" wrapText="true">
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="98.0" prefWidth="543.0" text="PHONE NUMBER CHANGE" textAlignment="CENTER" wrapText="true">
                             <font>
                                 <Font size="45.0" />
                             </font>
                         </Label>
-                        <TextField prefHeight="35.0" prefWidth="440.0" promptText="Enter Old Phone Number" style="-fx-background-radius: 20px; -fx-padding: 10px;">
+                  <Label contentDisplay="CENTER" prefHeight="50.0" prefWidth="169.0" text="Phone Numbers:" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                        <TextField fx:id="currPnoTxtField" prefHeight="35.0" prefWidth="440.0" promptText="Enter Current Phone Number" style="-fx-background-radius: 20px; -fx-padding: 10px;">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </TextField>
-                        <TextField prefHeight="35.0" prefWidth="440.0" promptText="Enter New Phone Number" style="-fx-background-radius: 20px; -fx-padding: 10px;">
+                        <TextField fx:id="newPnoTxtField" prefHeight="35.0" prefWidth="440.0" promptText="Enter New Phone Number" style="-fx-background-radius: 20px; -fx-padding: 10px;">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </TextField>
+                  <Label contentDisplay="CENTER" prefHeight="43.0" prefWidth="119.0" text="OTP:" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="otpField" promptText="Enter OTP" style="-fx-background-radius: 20px; -fx-padding: 10px;">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
                         <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
                             <children>
-                                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="125.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-effect: dropshadow(gaussian, black, 10, 0.5, 0, 0);" text="Submit" textAlignment="CENTER">
+                                <Button fx:id="pnoSubmitBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#pnoChange" prefHeight="50.0" prefWidth="125.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-effect: dropshadow(gaussian, black, 10, 0.5, 0, 0);" text="Submit" textAlignment="CENTER">
                                     <font>
                                         <Font size="22.0" />
                                     </font>

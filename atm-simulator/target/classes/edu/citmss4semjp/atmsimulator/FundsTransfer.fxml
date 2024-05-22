@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="rootLayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="947.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="rootLayout" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="947.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.citmss4semjp.atmsimulator.FTController">
     <top>
         <HBox fx:id="appHB" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #FF5722;" BorderPane.alignment="CENTER">
             <children>
@@ -28,8 +28,7 @@
                         </Label>
                     </children>
                 </HBox>
-            </children>
-        </HBox>
+            </children></HBox>
     </top>
     <right>
         <SplitPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" orientation="VERTICAL" prefHeight="522.0" prefWidth="300.0" style="-fx-background-color: #303841;" BorderPane.alignment="CENTER">
@@ -75,7 +74,7 @@
                                         <Font size="20.0" />
                                     </font>
                                 </Button>
-                                <Button fx:id="cancel" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: red; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="CANCEL" textAlignment="CENTER" GridPane.columnIndex="3">
+                                <Button fx:id="cancel" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#goHome" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: red; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="CANCEL" textAlignment="CENTER" GridPane.columnIndex="3">
                                     <font>
                                         <Font name="System Bold" size="14.0" />
                                     </font>
@@ -115,7 +114,7 @@
                                         <Font size="20.0" />
                                     </font>
                                 </Button>
-                                <Button fx:id="enter" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: green; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="ENTER" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                <Button fx:id="enter" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleFundTransfer" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: green; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="ENTER" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                     <font>
                                         <Font name="System Bold" size="17.0" />
                                     </font>
@@ -136,7 +135,7 @@
         <Pane fx:id="leftSysBtns" prefHeight="522.0" prefWidth="100.0" style="-fx-background-color: #303841;" BorderPane.alignment="BOTTOM_CENTER" />
     </left>
     <center>
-        <BorderPane fx:id="dispPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: silver;" BorderPane.alignment="CENTER">
+        <BorderPane fx:id="dispPane" prefHeight="458.0" prefWidth="590.0" style="-fx-background-color: silver;" BorderPane.alignment="CENTER">
             <right>
                 <Pane fx:id="rightSysBtns" prefHeight="522.0" prefWidth="100.0" style="-fx-background-color: #303841;" BorderPane.alignment="BOTTOM_CENTER" />
             </right>
@@ -148,29 +147,29 @@
                                 <Font size="45.0" />
                             </font>
                         </Label>
-                  <Label prefHeight="50.0" text="Recipient Account Number:" textAlignment="CENTER">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
+                        <Label prefHeight="50.0" text="Recipient Account Number:" textAlignment="CENTER">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
                         <TextField fx:id="recAccNo" prefHeight="35.0" prefWidth="440.0" promptText="Enter Account Number" style="-fx-background-radius: 20px; -fx-padding: 10px;">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </TextField>
-                  <Label prefHeight="50.0" text="Transfer Amount:" textAlignment="CENTER">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="transAmt" layoutX="110.0" layoutY="437.0" prefHeight="35.0" prefWidth="440.0" promptText="Enter Amount" style="-fx-background-radius: 20px; -fx-padding: 10px;">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </TextField>
+                        <Label prefHeight="50.0" text="Transfer Amount:" textAlignment="CENTER">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="transAmt" layoutX="110.0" layoutY="437.0" prefHeight="35.0" prefWidth="440.0" promptText="Enter Amount" style="-fx-background-radius: 20px; -fx-padding: 10px;">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </TextField>
                         <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
                             <children>
-                                <Button fx:id="transferBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="125.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-effect: dropshadow(gaussian, black, 10, 0.5, 0, 0);" text="Transfer" textAlignment="CENTER">
+                                <Button fx:id="transferBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleFundTransfer" prefHeight="50.0" prefWidth="125.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-effect: dropshadow(gaussian, black, 10, 0.5, 0, 0);" text="Transfer" textAlignment="CENTER">
                                     <font>
                                         <Font size="22.0" />
                                     </font>

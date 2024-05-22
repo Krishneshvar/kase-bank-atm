@@ -1,31 +1,37 @@
 package edu.citmss4semjp.atmsimulator;
 
+import java.sql.*;
+
 public class OtpGenerator {
 
-    public static void main(String[] args) {
-        int n = 2; // Specify the value of n for 2^n digits
-        if (n >= 0) {
-            int numberOfDigits = (int) Math.pow(2, n); // Calculate 2^n
+    public static String genOTP() throws SQLException {
+        int n = 2;
+        String otp = "";
 
-            String otp = "";
+        int numberOfDigits = (int) Math.pow(2, n); // Calculate 2^n
 
-            // LCG parameters
-            long seed = System.currentTimeMillis();
-            long a = 1664525L;
-            long c = 1013904223L;
-            long m = (long) Math.pow(2, 32);
+        long seed = System.currentTimeMillis();
+        long a = 1664525L;
+        long c = 1013904223L;
+        long m = (long) Math.pow(2, 32);
 
-            long randomNumber = seed;
+        long randomNumber = seed;
 
-            // Generate each digit of the random number 2^n times
-            for (int i = 0; i < numberOfDigits; i++) {
-                randomNumber = (a * randomNumber + c) % m;
-                int randomDigit = (int) (randomNumber % 10);
-                otp = otp + randomDigit;
-            }
-
-            // Print the generated random number
-            System.out.println("Welcome!\nYour one-time password is  " + otp+". \nPlease do not share this code. ");
+        for (int i = 0; i < numberOfDigits; i++) {
+            randomNumber = (a * randomNumber + c) % m;
+            int randomDigit = (int) (randomNumber % 10);
+            otp = otp + randomDigit;
         }
+        String currUserAccNo = DatabaseConnection.getAccountNumberFromCurrentSession();
+        updateCurrUserOTP(otp, currUserAccNo);
+        return otp;
+    }
+
+    public static void updateCurrUserOTP(String Otp, String currAccNo) throws SQLException {
+        Connection connection = DatabaseConnection.getConnection();
+        String sql = "UPDATE current_atmuser SET otp = ? WHERE acc_no = ?";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setString(1, Otp);
+        statement.setString(2, currAccNo);
     }
 }

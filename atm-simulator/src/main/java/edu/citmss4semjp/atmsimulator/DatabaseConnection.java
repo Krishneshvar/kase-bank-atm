@@ -1,17 +1,12 @@
 /**
- * @author: Avanthika PG
- * @date: 13/04/2024
- * 
- * This file connects the PostgreSQL  database of  Kasebank to the java program.
+ * This file connects the PostgreSQL database of Kase Bank to the java program.
  */
 
 package edu.citmss4semjp.atmsimulator;
 
-import java.sql.Connection;  // This interface represents the connection of database.
-import java.sql.DriverManager;  // For managing a set of JDBC drivers
-import java.sql.SQLException;  // Used to handle exceptions that may occur during database operations using JDBC.
+// SQL imports
+import java.sql.*;
 
-// URL specifies the address and parameters needed to connect the database
 public class DatabaseConnection {
     static String URL = "jdbc:postgresql://localhost:5432/kasebankdatabase";
     static String USERNAME = "postgres";
@@ -19,24 +14,68 @@ public class DatabaseConnection {
 
     private static Connection connection;  // database connection object
 
-    DatabaseConnection() {}  // Constructor
+    DatabaseConnection() {}  // Default constructor
 
     /**
      * Method to get database connection
-     * 
      * @returns connection 
      */
     public static Connection getConnection() {
-      // If connection is not established,establishes new connection
+      // If connection is not established, establishes new connection
         if (connection == null) {
             try {
                 connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
             } catch (SQLException e) {
-                // If conncetion fails,prints an error message.
-                System.out.println("Connection to PostgreSQL failed. Check JDBC URL, username, and password.");
+                // If connection fails, prints an error message.
+                System.out.println("\nConnection to PostgreSQL failed. Check JDBC URL, username, and password.\n" + e);
             }
         }
         return connection;
+    }
+
+    static String getAccountNumberFromCurrentSession() {
+        try {
+            Connection connection = DatabaseConnection.getConnection();
+            String sql = "SELECT acc_no FROM current_atmuser LIMIT 1";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            ResultSet resultSet = statement.executeQuery();
+
+            if (resultSet.next()) {
+                return resultSet.getString("acc_no");
+            }
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    static void truncateCurrentSession() {
+        try {
+            Connection connection = DatabaseConnection.getConnection();
+            String sql = "TRUNCATE TABLE current_atmuser";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.executeUpdate();
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    static String getCustID() throws SQLException {
+        Connection connection = DatabaseConnection.getConnection();
+        String accNo = DatabaseConnection.getAccountNumberFromCurrentSession();
+
+        String sql = "SELECT cust_id FROM acc_details WHERE acc_no = ?";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setString(1, accNo);
+
+        ResultSet res = statement.executeQuery();
+
+        if (res.next()) {
+            return res.getString("cust_id");
+        }
+        return null;
     }
 
     // Method to close database connection
@@ -48,8 +87,8 @@ public class DatabaseConnection {
                 System.out.println("Connection closed.");
             }
         } catch (SQLException e) {
-            // If an error occurs while closing prints an eroor message.
-            System.out.println("Error closing connection: " + e.getMessage());
+            // If an error occurs while closing prints an error message.
+            System.out.println("\nError closing connection: " + e);
         }
     }
 }

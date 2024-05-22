@@ -14,6 +14,13 @@
     <junit.version>5.10.0</junit.version>
   </properties>
 
+  <repositories>
+    <repository>
+      <id>sarxos-repo</id>
+      <url>https://repo.sarxos.pl/snap</url>
+    </repository>
+  </repositories>
+
   <dependencies>
     <dependency>
       <groupId>org.openjfx</groupId>
@@ -23,6 +30,11 @@
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-fxml</artifactId>
+      <version>21</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-swing</artifactId>
       <version>21</version>
     </dependency>
     <dependency>
@@ -66,6 +78,16 @@
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
       <version>42.7.3</version>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.mail</groupId>
+      <artifactId>jakarta.mail</artifactId>
+      <version>1.6.7</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.sarxos</groupId>
+      <artifactId>webcam-capture</artifactId>
+      <version>0.3.12</version>
     </dependency>
   </dependencies>
 
