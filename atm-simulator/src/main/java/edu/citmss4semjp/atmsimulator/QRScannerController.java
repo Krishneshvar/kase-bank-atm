@@ -25,9 +25,6 @@ public class QRScannerController {
     private Button cancel;
 
     @FXML
-    private Button clear;
-
-    @FXML
     private Button enter;
 
     @FXML

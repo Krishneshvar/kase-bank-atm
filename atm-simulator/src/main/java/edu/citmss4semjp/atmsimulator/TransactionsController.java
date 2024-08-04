@@ -36,9 +36,6 @@ public class TransactionsController {
     private Button withdrawBtn;
 
     @FXML
-    private Button cancel;
-
-    @FXML
     private void startBalanceInqScene() throws IOException, SQLException {
         FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(getClass().getResource("Balance.fxml")));
         Parent detailroot = loader.load();

@@ -60,17 +60,17 @@
                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
-                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="1" textAlignment="CENTER">
+                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#one" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="1" textAlignment="CENTER">
                                     <font>
                                         <Font size="20.0" />
                                     </font>
                                 </Button>
-                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="2" textAlignment="CENTER" GridPane.columnIndex="1">
+                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#two" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="2" textAlignment="CENTER" GridPane.columnIndex="1">
                                     <font>
                                         <Font size="20.0" />
                                     </font>
                                 </Button>
-                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="3" textAlignment="CENTER" GridPane.columnIndex="2">
+                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#three" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="3" textAlignment="CENTER" GridPane.columnIndex="2">
                                     <font>
                                         <Font size="20.0" />
                                     </font>
@@ -80,37 +80,37 @@
                                         <Font name="System Bold" size="14.0" />
                                     </font>
                                 </Button>
-                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="4" textAlignment="CENTER" GridPane.rowIndex="1">
+                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#four" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="4" textAlignment="CENTER" GridPane.rowIndex="1">
                                     <font>
                                         <Font size="20.0" />
                                     </font>
                                 </Button>
-                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#five" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                     <font>
                                         <Font size="20.0" />
                                     </font>
                                 </Button>
-                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="6" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#six" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="6" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                     <font>
                                         <Font size="20.0" />
                                     </font>
                                 </Button>
-                                <Button fx:id="clear" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: yellow; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="CLEAR" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                <Button fx:id="clear" alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#backspace" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: yellow; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="CLEAR" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                     <font>
                                         <Font name="System Bold" size="17.0" />
                                     </font>
                                 </Button>
-                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="7" textAlignment="CENTER" GridPane.rowIndex="2">
+                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#seven" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="7" textAlignment="CENTER" GridPane.rowIndex="2">
                                     <font>
                                         <Font size="20.0" />
                                     </font>
                                 </Button>
-                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="8" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#eight" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="8" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                     <font>
                                         <Font size="20.0" />
                                     </font>
                                 </Button>
-                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="9" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#nine" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="9" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                     <font>
                                         <Font size="20.0" />
                                     </font>
@@ -120,7 +120,7 @@
                                         <Font name="System Bold" size="17.0" />
                                     </font>
                                 </Button>
-                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#zero" prefHeight="72.0" prefWidth="50.0" style="-fx-background-color: #00ADB5; -fx-background-radius: 20px; -fx-background-insets: 1px; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);" text="0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                     <font>
                                         <Font size="20.0" />
                                     </font>

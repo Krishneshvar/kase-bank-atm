@@ -8,7 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 // SQL imports
@@ -17,7 +17,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Objects;
 
 public class BalanceController {
 
@@ -26,6 +25,9 @@ public class BalanceController {
 
     @FXML
     private Label accNoLbl;
+
+    @FXML
+    private TextArea receiptArea;
 
     // Method to check balance
     static String chkBalance() throws SQLException {
@@ -50,8 +52,11 @@ public class BalanceController {
         String accNo = DatabaseConnection.getAccountNumberFromCurrentSession();
         String bal = chkBalance();
 
+        String receipt = ReceiptGen.printATMReceipt("Balance Inquiry", 0);
+
         accNoLbl.setText(accNo);
         accBalLbl.setText(bal);
+        receiptArea.setText(receipt);
     }
 
     @FXML

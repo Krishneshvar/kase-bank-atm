@@ -24,40 +24,47 @@ public class FTController {
     @FXML
     private TextField transAmt;
 
+    public int tf = 0;
+
     @FXML
     private void handleFundTransfer(ActionEvent event) {
-        String senderAccountNumber = DatabaseConnection.getAccountNumberFromCurrentSession();
-        String recipientAccountNumber = recAccNo.getText().trim();
-        double amount;
-
-        if (senderAccountNumber == null) {
-            ShowAlerts.showErrorAlert("Account Missing", "No account found in the current session.");
+        if (tf == 0) {
+            tf++;
         }
-        else if (recipientAccountNumber.isEmpty()) {
-            ShowAlerts.showErrorAlert("Recipient Account Number Missing", "Please enter the recipient account number. It shouldn't be empty.");
-        }
-        else {
-            try {
-                amount = Double.parseDouble(transAmt.getText());
+        if (tf == 1) {
+            String senderAccountNumber = DatabaseConnection.getAccountNumberFromCurrentSession();
+            String recipientAccountNumber = recAccNo.getText().trim();
+            double amount;
 
-                if (transferFunds(senderAccountNumber, recipientAccountNumber, amount)) {
-                    ShowAlerts.showInfoAlert("Funds Transfer Successful", "Funds transferred to specified account successfully.");
-
-                    String custID = DatabaseConnection.getCustID();
-                    String accNo = DatabaseConnection.getAccountNumberFromCurrentSession();
-                    TransactionHist.saveTransaction(custID, accNo, amount, "Fund Transfer", recipientAccountNumber);
-
-                    //DatabaseConnection.truncateCurrentSession();
-                    DepositController.navigateToThankYouScene(event);
-                }
-                else {
-                    ShowAlerts.showErrorAlert("Fund Transfer Failed", "Failed to transfer funds.");
-                }
+            if (senderAccountNumber == null) {
+                ShowAlerts.showErrorAlert("Account Missing", "No account found in the current session.");
             }
-            catch (NumberFormatException e) {
-                ShowAlerts.showErrorAlert("Invalid Amount", "Transfer amount is invalid. Please enter a valid amount.");
-            } catch (SQLException e) {
-                e.printStackTrace();
+            else if (recipientAccountNumber.isEmpty()) {
+                ShowAlerts.showErrorAlert("Recipient Account Number Missing", "Please enter the recipient account number. It shouldn't be empty.");
+            }
+            else {
+                try {
+                    amount = Double.parseDouble(transAmt.getText());
+
+                    if (transferFunds(senderAccountNumber, recipientAccountNumber, amount)) {
+                        ShowAlerts.showInfoAlert("Funds Transfer Successful", "Funds transferred to specified account successfully.");
+
+                        String custID = DatabaseConnection.getCustID();
+                        String accNo = DatabaseConnection.getAccountNumberFromCurrentSession();
+                        TransactionHist.saveTransaction(custID, accNo, amount, "Fund Transfer", recipientAccountNumber);
+
+                        //DatabaseConnection.truncateCurrentSession();
+                        DepositController.navigateToThankYouScene(event);
+                    }
+                    else {
+                        ShowAlerts.showErrorAlert("Fund Transfer Failed", "Failed to transfer funds.");
+                    }
+                }
+                catch (NumberFormatException e) {
+                    ShowAlerts.showErrorAlert("Invalid Amount", "Transfer amount is invalid. Please enter a valid amount.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
@@ -91,6 +98,116 @@ public class FTController {
             e.printStackTrace();
         }
         return false;
+    }
+
+    @FXML
+    void one() {
+        if (tf == 0) {
+            recAccNo.appendText("1");
+        }
+        if (tf == 1) {
+            transAmt.appendText("1");
+        }
+    }
+    @FXML
+    void two() {
+        if (tf == 0) {
+            recAccNo.appendText("2");
+        }
+        if (tf == 1) {
+            transAmt.appendText("2");
+        }
+    }
+    @FXML
+    void three() {
+        if (tf == 0) {
+            recAccNo.appendText("3");
+        }
+        if (tf == 1) {
+            transAmt.appendText("3");
+        }
+    }
+    @FXML
+    void four() {
+        if (tf == 0) {
+            recAccNo.appendText("4");
+        }
+        if (tf == 1) {
+            transAmt.appendText("4");
+        }
+    }
+    @FXML
+    void five() {
+        if (tf == 0) {
+            recAccNo.appendText("5");
+        }
+        if (tf == 1) {
+            transAmt.appendText("5");
+        }
+    }
+    @FXML
+    void six() {
+        if (tf == 0) {
+            recAccNo.appendText("6");
+        }
+        if (tf == 1) {
+            transAmt.appendText("6");
+        }
+    }
+    @FXML
+    void seven() {
+        if (tf == 0) {
+            recAccNo.appendText("7");
+        }
+        if (tf == 1) {
+            transAmt.appendText("7");
+        }
+    }
+    @FXML
+    void eight() {
+        if (tf == 0) {
+            recAccNo.appendText("8");
+        }
+        if (tf == 1) {
+            transAmt.appendText("8");
+        }
+    }
+    @FXML
+    void nine() {
+        if (tf == 0) {
+            recAccNo.appendText("9");
+        }
+        if (tf == 1) {
+            transAmt.appendText("9");
+        }
+    }
+    @FXML
+    void zero() {
+        if (tf == 0) {
+            recAccNo.appendText("0");
+        }
+        if (tf == 1) {
+            transAmt.appendText("0");
+        }
+    }
+
+    @FXML
+    void backspace() {
+        if (tf == 0) {
+            String currentText = recAccNo.getText();
+            if (!currentText.isEmpty()) {
+                recAccNo.setText(currentText.substring(0, currentText.length() - 1));
+            }
+        }
+        if (tf == 1) {
+            String currentText = transAmt.getText();
+            if (!currentText.isEmpty()) {
+                transAmt.setText(currentText.substring(0, currentText.length() - 1));
+            }
+            if (currentText.isEmpty()) {
+                tf = 0;
+            }
+        }
     }
 
     @FXML

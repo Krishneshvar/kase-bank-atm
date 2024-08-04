@@ -68,7 +68,7 @@ public class ReceiptGen {
         return String.format("%s%08d", BANK_CODE, receiptNumber);
     }
 
-    public static String printATMReceiptGen(String transac) throws SQLException {
+    public static String printATMReceipt(String transac, int amount) throws SQLException {
         String accNo = DatabaseConnection.getAccountNumberFromCurrentSession();
         double balance = Double.parseDouble(Objects.requireNonNull(BalanceController.chkBalance()));
         if (accNo == null) {
@@ -86,17 +86,18 @@ public class ReceiptGen {
         // Mask the account number
         String maskedAccountNumber = maskAccountNumber(accNo);
 
-        return "***********************************\n" +
+        return "\n***********************************\n" +
                 "             " + BANK_NAME + "\n            ATM Receipt" +
                 "\n***********************************\n" +
-                "Date          : " + currentDate +
-                "ATM ID        : " + ATM_ID +
-                "Receipt Number: " + receiptNumber +
-                "Account Number: " + maskedAccountNumber +
-                "\nTransaction      : " + transac +
-                "Available Balance: ₹" + String.format("%.2f", balance) +
-                "\n***********************************\n" +
-                "Thank you for choosing KASE Bank!" +
-                "\n***********************************";
+                "\nDate          : " + currentDate +
+                "\nATM ID        : " + ATM_ID +
+                "\nReceipt Number: " + receiptNumber +
+                "\nAccount Number: " + maskedAccountNumber +
+                "\n\nTransaction      : " + transac +
+                "\nAmount                :" + amount +
+                "\nAvailable Balance: ₹" + String.format("%.2f", balance) +
+                "\n\n***********************************\n" +
+                "\n\nThank you for choosing KASE Bank!" +
+                "\n\n***********************************";
     }
 }

@@ -23,16 +23,16 @@ class MailGenerator {
         properties.put("mail.smtp.port", "587");
 
         // Sender User name(email) and Password
-        final String username = "71762231048@cit.edu.in";
-        final String password = "shaanthakumar.cit";
+        final String username = "EMAIL_ID";
+        final String password = "EMAIL_PASSWORD";
 
         // Create Session Object and pass the Credentials
         Session session = Session.getInstance(properties,
-            new Authenticator() {
-                protected PasswordAuthentication getPasswordAuthentication() {
-                    return new PasswordAuthentication(username, password);
-                }
-            });
+                new Authenticator() {
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return new PasswordAuthentication(username, password);
+                    }
+                });
 
         // Create Message Object receiving from
         Message message = prepareMessage(session, username, recipient);
@@ -69,10 +69,10 @@ class MailGenerator {
             message.setRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
             message.setSubject("ATM validation OTP");
             message.setText("\nHello KASE Bank User!" +
-                            "\nThe OTP for your current transaction is " + otp + "." +
-                            "\nPlease DO NOT share this code with anyone." +
-                            "If you aren't using the ATM right now, but you got this message, please report to the nearest bank." +
-                            "\n\nThank you!");
+                    "\nThe OTP for your current transaction is " + otp + "." +
+                    "\nPlease DO NOT share this code with anyone." +
+                    "If you aren't using the ATM right now, but you got this message, please report to the nearest bank." +
+                    "\n\nThank you!");
         }
         catch (Exception e) {
             e.printStackTrace();

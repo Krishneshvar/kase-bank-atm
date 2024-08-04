@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -24,19 +25,15 @@ public class DepositController {
     @FXML
     private TextField depositAmt;
 
-    @FXML
-    private GridPane numpad;
 
     @FXML
     private PasswordField pinTxtfield;
 
     @FXML
-    private Button clear;
+    private TextArea receiptArea;
 
     @FXML
     private TextField accTxtfield;
-
-    private NumPadController numPadController;
 
     @FXML
     private void handleDeposit(ActionEvent event) throws SQLException {
@@ -99,10 +96,73 @@ public class DepositController {
     }
 
     @FXML
+    void one() {
+        depositAmt.appendText("1");
+    }
+    @FXML
+    void two() {
+        depositAmt.appendText("2");
+    }
+    @FXML
+    void three() {
+        depositAmt.appendText("3");
+    }
+    @FXML
+    void four() {
+        depositAmt.appendText("4");
+    }
+    @FXML
+    void five() {
+        depositAmt.appendText("5");
+    }
+    @FXML
+    void six() {
+        depositAmt.appendText("6");
+    }
+    @FXML
+    void seven() {
+        depositAmt.appendText("7");
+    }
+    @FXML
+    void eight() {
+        depositAmt.appendText("8");
+    }
+    @FXML
+    void nine() {
+        depositAmt.appendText("9");
+    }
+    @FXML
+    void zero() {
+        depositAmt.appendText("0");
+    }
+
+    @FXML
+    void backspace() {
+        String currentText = depositAmt.getText();
+        if (!currentText.isEmpty()) {
+            depositAmt.setText(currentText.substring(0, currentText.length() - 1));
+        }
+    }
+
+    @FXML
     void goHome(ActionEvent event) throws IOException {
         DatabaseConnection.truncateCurrentSession();
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        currentStage.setScene(scene);
+        currentStage.setFullScreen(true);
+        currentStage.show();
+    }
+
+    @FXML
+    void gotoThankYou(ActionEvent event) throws IOException {
+        DatabaseConnection.truncateCurrentSession();
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ThankYouScene.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
 

@@ -8,9 +8,9 @@ package edu.citmss4semjp.atmsimulator;
 import java.sql.*;
 
 public class DatabaseConnection {
-    static String URL = "jdbc:postgresql://localhost:5432/kasebankdatabase";
+    static String URL = "jdbc:postgresql://localhost:5432/kasebankdatabase"; //"jdbc:postgresql://192.168.43.27:5432/kasebankdatabase";
     static String USERNAME = "postgres";
-    static String PASSWORD = "kichapostgresequel";
+    static String PASSWORD = "kichapostgresequel"; //"Elamaran@1403";
 
     private static Connection connection;  // database connection object
 
@@ -76,6 +76,26 @@ public class DatabaseConnection {
             return res.getString("cust_id");
         }
         return null;
+    }
+
+    static int getAmtFromDB() {
+        try {
+            Connection connection = DatabaseConnection.getConnection();
+            String accNo = DatabaseConnection.getAccountNumberFromCurrentSession();
+
+            String sql = "SELECT balance FROM acc_details WHERE acc_no = ?";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setString(1, accNo);
+            ResultSet resultSet = statement.executeQuery();
+
+            if (resultSet.next()) {
+                return resultSet.getInt("balance");
+            }
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
     }
 
     // Method to close database connection
