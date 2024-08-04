@@ -8,9 +8,9 @@ package edu.citmss4semjp.atmsimulator;
 import java.sql.*;
 
 public class DatabaseConnection {
-    static String URL = "jdbc:postgresql://localhost:5432/kasebankdatabase"; //"jdbc:postgresql://192.168.43.27:5432/kasebankdatabase";
-    static String USERNAME = "postgres";
-    static String PASSWORD = "kichapostgresequel"; //"Elamaran@1403";
+    static String URL = "JDBC_LINK";
+    static String USERNAME = "DB_USERNAME";
+    static String PASSWORD = "DB_PASSWORD";
 
     private static Connection connection;  // database connection object
 
